@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "kind": "wait",
+  "block_version": "0.1.0",
+  "maintained_by": "HackInvent",
+  "source": {
+    "algorithm": "block-source-v1",
+    "sha256": "561648a8d35c7a3a758c8ed4c8a88462644c8a5e113e9f6c785da00ec0ed8c66"
+  },
+  "bloxsmith_compatibility": [
+    "1.0.9"
+  ],
+  "tested_with_bloxsmith": "1.0.9",
+  "validations": [
+    {
+      "bloxsmith_version": "1.0.9",
+      "framework_commit": "f1a87f6369d2acfb8be41d23ea849384cd461c86",
+      "framework_source_sha256": "66e36a13fd9a23a0a0576ec81552d6e479671db6db9b8692cc7486c5aac4f3b8",
+      "tested_at": "2026-10-10T18:43:00.804482+00:00",
+      "status": "passed",
+      "installation_mode": "bundled",
+      "suite_paths": [
+        "tests/F5.01_wait.py",
+        "tests/F5.02_wait_runtime.py",
+        "tests/F8.01_wait_ui.py"
+      ],
+      "suite_count": 3,
+      "report_sha256": "0e13e6583cf9675a046ed0e5399cb3e919a5e0f6560f010a1a7be680704c14a8"
+    }
+  ]
+}

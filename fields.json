@@ -1,0 +1,62 @@
+[
+  {
+    "key": "mode",
+    "type": "select",
+    "options": [
+      "duration",
+      "until"
+    ],
+    "help": "duration waits the same number of seconds for every message. until releases at an ISO 8601 instant."
+  },
+  {
+    "key": "seconds",
+    "type": "number",
+    "min": 0.1,
+    "max": 86400,
+    "modes": "duration",
+    "help": "Delay from the arrival of each message, from 0.1 to 86400 seconds (24 hours)."
+  },
+  {
+    "key": "until",
+    "type": "text",
+    "placeholder": "2026-10-10T14:30:00Z",
+    "modes": "until",
+    "help": "ISO 8601 instant with an offset or Z, for example 2026-10-10T14:30:00Z. A past instant releases at once."
+  },
+  {
+    "key": "until_path",
+    "type": "text",
+    "placeholder": "/release_at",
+    "modes": "until",
+    "help": "Optional JSON Pointer read in each JSON message, for example /release_at. When set, it replaces until."
+  },
+  {
+    "key": "report_cancelled",
+    "type": "boolean",
+    "help": "Send messages dropped by cancel, refused at admission or stopped in One Shot to the cancelled output, with the reason."
+  },
+  {
+    "key": "max_pending",
+    "type": "integer",
+    "min": 1,
+    "max": 10000,
+    "advanced": true,
+    "help": "Maximum number of messages waiting at once. Further messages are refused and reported."
+  },
+  {
+    "key": "max_message_bytes",
+    "type": "integer",
+    "min": 1,
+    "max": 1000000,
+    "advanced": true,
+    "help": "Maximum size of one message in UTF-8 bytes. Larger messages are refused and reported without their content."
+  },
+  {
+    "key": "max_pending_bytes",
+    "type": "integer",
+    "min": 1048576,
+    "max": 1073741824,
+    "advanced": true,
+    "help": "Maximum total size of the waiting messages, in bytes. It bounds the memory used by this node."
+  }
+]

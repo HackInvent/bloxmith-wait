@@ -1,0 +1,16 @@
+/* Block-owned settings layout for the Wait modal and inspector. */
+[data-block-release="wait@0.1.0"] .owned-modal { width: 760px; }
+[data-block-release="wait@0.1.0"] .owned-body { flex: 1 1 auto; min-height: 0; overflow: auto; padding: 20px; }
+[data-block-release="wait@0.1.0"] .owned-fields { display: grid; grid-template-columns: minmax(0, 1fr); gap: 4px; }
+[data-block-release="wait@0.1.0"] .owned-mode-field[hidden] { display: none !important; }
+[data-block-release="wait@0.1.0"] .owned-usage { border-left: 3px solid var(--accent-strong, #257b98); padding: 4px 0 4px 12px; margin: 4px 0 12px; }
+[data-block-release="wait@0.1.0"] .owned-usage p { margin: 0 0 6px; }
+[data-block-release="wait@0.1.0"] .owned-advanced { border: 1px solid var(--line, #dbe3ec); border-radius: 12px; padding: 12px; margin: 12px 0; min-width: 0; }
+[data-block-release="wait@0.1.0"] .owned-advanced summary { cursor: pointer; font-weight: 600; padding: 4px; }
+[data-block-release="wait@0.1.0"] .owned-advanced[open] > summary { margin-bottom: 14px; }
+[data-block-release="wait@0.1.0"] .owned-advanced textarea { width: 100%; font-family: ui-monospace, monospace; resize: vertical; }
+[data-block-release="wait@0.1.0"] .owned-footer { display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; border-top: 1px solid var(--line, #dbe3ec); }
+[data-block-release="wait@0.1.0"] .owned-footer p { flex: 1 1 220px; margin: 0; }
+[data-block-release="wait@0.1.0"] .field-hint { color: var(--muted, #657186); font-size: 12px; line-height: 1.5; }
+[data-block-release="wait@0.1.0"] [data-properties-surface="inspector"] .inspector-actions { position: sticky; bottom: 0; z-index: 3; background: var(--panel, #fff); padding: 12px 0; }
+[data-block-release="wait@0.1.0"] .owned-form-status { white-space: normal; overflow-wrap: anywhere; }

@@ -1,0 +1,155 @@
+{
+  "kind": "wait",
+  "version": "0.1.0",
+  "title": "Wait",
+  "description": "Delay each message by a duration or until a date before passing it on.",
+  "repository_url": "https://github.com/HackInvent/bloxmith-wait",
+  "bloxsmith_compatibility": [
+    "1.0.9"
+  ],
+  "tested_with_bloxsmith": "1.0.9",
+  "prerequisites": [],
+  "locales": {
+    "en": "locales/en.json",
+    "fr": "locales/fr.json"
+  },
+  "ports": {
+    "inputs": [
+      {
+        "id": 1,
+        "name": "in",
+        "title": "in",
+        "accepts": [
+          "message/*",
+          "application/json",
+          "text/plain",
+          "text/html",
+          "file/path",
+          "image/path",
+          "directory/path",
+          "audio/path",
+          "control/trigger"
+        ],
+        "multiplicity": "one",
+        "required": true,
+        "execution_requirement": "required_for_execution"
+      },
+      {
+        "id": 2,
+        "name": "command_in",
+        "title": "command_in",
+        "accepts": [
+          "application/json",
+          "text/plain",
+          "message/*"
+        ],
+        "multiplicity": "one",
+        "required": false,
+        "execution_requirement": "not_required_for_execution"
+      }
+    ],
+    "outputs": [
+      {
+        "id": 1,
+        "name": "out",
+        "title": "out",
+        "emits": [
+          "message/*",
+          "application/json",
+          "text/plain",
+          "text/html",
+          "file/path",
+          "image/path",
+          "directory/path",
+          "audio/path",
+          "control/trigger"
+        ],
+        "multiplicity": "many"
+      },
+      {
+        "id": 2,
+        "name": "cancelled",
+        "title": "cancelled",
+        "emits": [
+          "application/json",
+          "message/*"
+        ],
+        "multiplicity": "many"
+      }
+    ]
+  },
+  "config": {
+    "mode": "duration",
+    "seconds": 5,
+    "until": "",
+    "until_path": "",
+    "report_cancelled": true,
+    "max_pending": 1000,
+    "max_message_bytes": 262144,
+    "max_pending_bytes": 67108864
+  },
+  "port_capabilities": {
+    "can_add_inputs": false,
+    "can_add_outputs": false
+  },
+  "runtime": {
+    "initial_state": "waiting",
+    "runtime_executable": true,
+    "active_worker": true,
+    "centralized_executor": "generic",
+    "centralized_dependency_mode": "any_event",
+    "active_execution_policy": "on_each_event"
+  },
+  "ui_assets": {
+    "modal": [
+      {
+        "kind": "css",
+        "path": "assets/css/properties.css"
+      },
+      {
+        "kind": "css",
+        "path": "assets/css/block_ui.css"
+      },
+      {
+        "kind": "js",
+        "path": "assets/js/properties.js"
+      },
+      {
+        "kind": "js",
+        "path": "assets/js/settings.js"
+      },
+      {
+        "kind": "js",
+        "path": "assets/js/block_modal.js"
+      }
+    ],
+    "inspector_panel": [
+      {
+        "kind": "css",
+        "path": "assets/css/properties.css"
+      },
+      {
+        "kind": "css",
+        "path": "assets/css/block_ui.css"
+      },
+      {
+        "kind": "js",
+        "path": "assets/js/properties.js"
+      },
+      {
+        "kind": "js",
+        "path": "assets/js/settings.js"
+      },
+      {
+        "kind": "js",
+        "path": "assets/js/inspector_panel.js"
+      }
+    ],
+    "node_card": [
+      {
+        "kind": "css",
+        "path": "assets/css/node_card.css"
+      }
+    ]
+  }
+}
